@@ -1,1 +1,52 @@
-v
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Exame</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="fade-in" >
+    <div class="container-editar-exame">
+        <h1>Editar Exame</h1>
+        <form action="{{ url_for('exame.editar_exame', id=exame[0]) }}" method="POST" class="form">
+            <label>
+                Nome do Paciente:
+                <input type="text" name="nome_paciente" value="{{ exame[1] }}" required>
+            </label>
+
+            <label>
+                Nome do Exame:
+                <input type="text" name="nome" value="{{ exame[2] }}" required>
+            </label>
+
+            <label>
+                Descrição:
+                <input type="text" name="descricao" value="{{ exame[3] }}" required>
+            </label>
+
+            <label>
+                Data e Hora:
+                <input type="datetime-local" name="data_hora" value="{{ exame[4] }}" required>
+            </label>
+
+            <label>
+                Status:
+                <select name="status" required>
+                    <option value="Agendado" {% if exame[5] == 'Agendado' %} selected {% endif %}>Agendado</option>
+                    <option value="Realizado" {% if exame[5] == 'Realizado' %} selected {% endif %}>Realizado</option>
+                    <option value="Cancelado" {% if exame[5] == 'Cancelado' %} selected {% endif %}>Cancelado</option>
+                </select>
+            </label>
+
+            <label>
+                Preço:
+                <input type="text" name="preco" value="{{ exame[6] }}" required>
+            </label>
+
+            <button type="submit" class="btn">Atualizar Exame</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
