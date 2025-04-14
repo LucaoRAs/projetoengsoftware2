@@ -1,1 +1,52 @@
-v
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Novo Exame</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="fade-in">
+    <div class="container-novo-exame">
+        <h1 class="text-center">Cadastrar Novo Exame</h1>
+
+        <form action="{{ url_for('exame.criar_exame') }}" method="POST" class="form">
+            <div class="form-group">
+                <label for="nome_paciente">Nome do Paciente:</label>
+                <input type="text" name="nome_paciente" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nome">Nome do Exame:</label>
+                <input type="text" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <input type="text" name="descricao" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data_hora">Data e Hora:</label>
+                <input type="datetime-local" name="data_hora" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select name="status" required>
+                    <option value="Agendado">Agendado</option>
+                    <option value="Concluído">Concluído</option>
+                    <option value="Cancelado">Cancelado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="preco">Preço:</label>
+                <input type="number" name="preco" step="0.01" required>
+            </div>
+
+            <button type="submit" class="btn">Cadastrar Exame</button>
+        </form>
+    </div>
+</body>
+</html>
