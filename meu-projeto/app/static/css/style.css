@@ -1,0 +1,496 @@
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GERAIS */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('/static/images/imagem.jpg') center/cover no-repeat;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Container principal */
+.inicio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inicio-content {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+    text-align: center;
+    width: 100%;
+    animation: fadeInAnimation 0.8s ease-out forwards;
+}
+
+.inicio-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.inicio-description {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+}
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.cta-item {
+    width: 100%;
+}
+
+/* Botões */
+.btn {
+    display: block;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #111;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Botão Primário */
+.btn-primary {
+    background-color: #111;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #222;
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Botão Secundário */
+.btn-secondary {
+    background-color: #111;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #222;
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+/* Animação */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInAnimation 0.8s ease-out forwards;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .inicio-content {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .inicio-title {
+        font-size: 2rem;
+    }
+
+    .inicio-description {
+        font-size: 1rem;
+    }
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Containers */
+.container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.container-editar-exame,
+.container-novo-exame {
+    width: 100%;
+    max-width: 770px;
+    margin: 40px auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Inputs */
+.form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #555;
+}
+
+.form input,
+.form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 0.4rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.3s ease-in-out;
+}
+
+.form input:focus,
+.form select:focus {
+    border-color: #111;
+    outline: none;
+}
+
+/* Tabela */
+.table-container {
+    overflow: hidden;  /* Garantir que a tabela fique sem overflow */
+    background-color: #fff;  /* Fundo branco */
+    padding: 1rem;  /* Garantir que a área do botão tenha padding igual */
+   
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.custom-table thead {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-weight: 500;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.custom-table tr:hover {
+    background-color: #eaeaea;
+}
+
+/* Botões de Ação */
+.actions {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 0px; 
+    justify-content: flex-start; 
+}
+
+.btn.small {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    background-color: #111;
+    color: #fff;
+    border-radius: 8px;
+    border: none;  
+    width: auto;
+    margin: 0;  
+}
+
+.btn.small:hover {
+    background-color: #222;
+}
+
+.btn.warning {
+    background-color: #000000;
+    color: white;
+    width: auto; 
+    padding: 8px 15px;
+}
+
+.btn.warning:hover {
+    background-color: #000000;
+}
+
+/* Botão danger (excluir) */
+.btn.danger {
+    background-color: #df6c00;
+    color: white;
+    width: auto; /* Ajustar o tamanho */
+    padding: 8px 15px;
+}
+
+.btn.danger:hover {
+    background-color: #df6c00;
+}
+
+
+/* Formulários */
+.form {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #111;
+}
+
+/* Texto centralizado */
+.text-center {
+    text-align: center;
+}
+
+/* Barra de Busca */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 260px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 2px solid #111;
+    border-radius: 8px;
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+.search-input:focus {
+    border-color: #222;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.25);
+}
+
+.btn-icon {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-icon:hover {
+    background-color: #222;
+    transform: scale(1.05);
+}
+
+.btn-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Login */
+.login-body {
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.login-input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.login-input:focus {
+    border-color: #111;
+    outline: none;
+}
+
+.login-btn {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #111;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+}
+
+.logout{
+    margin: 20px;
+}
+
+.logout-btn {
+    background-color: transparent;
+    color: #111;
+    border: 2px solid #111;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .logout-btn:hover {
+    background-color: #111;
+    color: #fff;
+    transform: translateY(-1px);
+  }
+  
