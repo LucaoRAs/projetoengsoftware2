@@ -1,9 +1,7 @@
-from flask import Blueprint, render_template, request, redirect, url_for
-from app.models.exame import Exame  
-from flask import session
+from flask import Blueprint, render_template, request, redirect, url_for, session
+from app.models.exame import Exame
 
 exame_blueprint = Blueprint('exame', __name__)
-
 
 @exame_blueprint.route('/login')
 def login_fake():

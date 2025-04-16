@@ -1,27 +1,37 @@
-# app/__init__.py
-
 from flask import Flask
-from flask_mysqldb import MySQL
+from config import Config
+from app.extensions import mysql
+from app.controllers.controller_exame import exame_blueprint
+import logging
+from logging.handlers import RotatingFileHandler
+import os
+import json
 
-# Inicialize a instância do MySQL
-mysql = MySQL()
+if not os.path.exists('logs'):
+    os.makedirs('logs')
 
+class JsonFormatter(logging.Formatter):
+    def format(self, record):
+        log_record = {
+            'timestamp': self.formatTime(record),
+            'level': record.levelname,
+            'message': record.getMessage()
+        }
+        return json.dumps(log_record, ensure_ascii=False)  # Evita escape de caracteres especiais
+
+# Definir o manipulador de log
+log_handler = RotatingFileHandler('logs/conexoes_banco.json', maxBytes=1000000, backupCount=5)
+log_handler.setFormatter(JsonFormatter())
+
+logger = logging.getLogger('conexao_banco')
+logger.setLevel(logging.INFO)
+logger.addHandler(log_handler)
 def create_app():
-    # Crie a instância do Flask
     app = Flask(__name__)
+    app.config.from_object(Config)
 
-    # Configurações do banco de dados
-    app.config['MYSQL_HOST'] = 'localhost'
-    app.config['MYSQL_USER'] = 'root'
-    app.config['MYSQL_PASSWORD'] = '4862'
-    app.config['MYSQL_DB'] = 'banco_agenda_exames'
-
-    # Inicialize o MySQL com a instância do app
     mysql.init_app(app)
 
-    # Registrar blueprints
-    from app.controllers.controller_exame import exame_blueprint
     app.register_blueprint(exame_blueprint)
 
-    # Retorne a instância do app para o uso
     return app
