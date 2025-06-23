@@ -12,7 +12,7 @@ def login_fake():
 def pagina_inicio():
     return render_template('inicio.html')
 
-# Rota para listar todos os exames
+
 @exame_blueprint.route('/exames', methods=['GET'])
 def listar_exames():
     termo_busca = request.args.get('busca', '').strip()
@@ -26,12 +26,12 @@ def listar_exames():
 
 
 
-# Rota para exibir o formulário de cadastro de novo exame
+
 @exame_blueprint.route('/exames/novo', methods=['GET'])
 def novo_exame():
     return render_template('novo_exame.html')
 
-# Rota para criar um novo exame
+
 @exame_blueprint.route('/exames', methods=['POST'])
 def criar_exame():
     nome_paciente = request.form['nome_paciente']  
@@ -44,7 +44,7 @@ def criar_exame():
     Exame.criar_exame(nome_paciente, nome, descricao, data_hora, status, preco)
     return redirect(url_for('exame.listar_exames'))
 
-# Rota para editar um exame
+
 @exame_blueprint.route('/exames/editar/<int:id>', methods=['GET', 'POST'])
 def editar_exame(id):
     exame_encontrado = Exame.buscar_exame_por_id(id)
@@ -62,7 +62,7 @@ def editar_exame(id):
 
     return render_template('editar_exame.html', exame=exame_encontrado)
 
-# Rota para excluir um exame
+
 @exame_blueprint.route('/exames/deletar/<int:id>', methods=['GET'])
 def deletar_exame(id):
     Exame.deletar_exame(id)
