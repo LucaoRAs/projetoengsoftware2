@@ -26,6 +26,7 @@ log_handler.setFormatter(JsonFormatter())
 logger = logging.getLogger('conexao_banco')
 logger.setLevel(logging.INFO)
 logger.addHandler(log_handler)
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -34,4 +35,4 @@ def create_app():
 
     app.register_blueprint(exame_blueprint)
 
-    return app
+    return app 

@@ -71,6 +71,4 @@ def deletar_exame(id):
 @exame_blueprint.route('/login')
 def logout():
     session.clear()
-    return redirect(url_for('exame.login_fake'))
-
-
+    return redirect(url_for('exame.login_fake')) 

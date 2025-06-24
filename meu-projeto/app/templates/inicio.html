@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Sistema de Exames</title>
+    <title>Início - Sistema de Exames</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
-<body class="fade-in">
+<body>
     <div class="inicio-container">
         <div class="inicio-content">
-            <h1 class="inicio-title">Sistema de Exames</h1>
-            <p class="inicio-description">Gerencie os exames médicos de forma simples e eficiente.</p>
-            
-        
+            <h1 class="inicio-title">Sistema de Agendamento de Exames</h1>
+            <p class="inicio-description">Bem-vindo ao sistema de gerenciamento de exames médicos</p>
             <div class="cta-container">
-                
-                
                 <div class="cta-item">
-                    <a href="{{ url_for('exame.listar_exames') }}" class="btn btn-primary">Ver agendamentos</a>
+                    <a href="{{ url_for('exame.listar_exames') }}" class="btn btn-primary">Ver Exames</a>
                 </div>
-                
-                
                 <div class="cta-item">
-                    <a href="{{ url_for('exame.novo_exame') }}" class="btn btn-secondary">Agendar Exame</a>
+                    <a href="{{ url_for('exame.novo_exame') }}" class="btn btn-secondary">Novo Exame</a>
                 </div>
-
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-end mb-3">
-        <a href="{{ url_for('exame.logout') }}" class="btn btn-outline-dark logout-btn">Sair</a>
-      </div>
-      
 </body>
-
-</html>
+</html> 

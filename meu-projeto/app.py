@@ -8,4 +8,4 @@ def home():
     return redirect(url_for('exame.login_fake'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 

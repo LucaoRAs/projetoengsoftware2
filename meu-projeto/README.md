@@ -1,5 +1,7 @@
 # Sistema de Agendamento de Exames
 
+Sistema web desenvolvido em Flask para gerenciamento de exames médicos.
+
 ## Pré-requisitos
 
 - Python 3.8+
@@ -52,7 +54,7 @@ class Config:
     MYSQL_USER = 'root'       # Seu usuário MySQL
     MYSQL_PASSWORD = 'root'   # Sua senha MySQL
     MYSQL_DB = 'banco_agenda_exames'
-    MYSQL_PORT = 3308         # Sua porta MySQL
+    MYSQL_PORT = 3306         # Sua porta MySQL
 ```
 
 ### 4. Executar a Aplicação
@@ -71,12 +73,26 @@ class Config:
 meu-projeto/
 ├── app/
 │   ├── controllers/
+│   │   ├── __init__.py
 │   │   └── controller_exame.py
 │   │   
 │   ├── models/
+│   │   ├── __init__.py
 │   │   └── exame.py
+│   │   
 │   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   └── js/
+│   │       └── script.js
+│   │   
 │   ├── templates/
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── inicio.html
+│   │   ├── novo_exame.html
+│   │   └── editar_exame.html
+│   │   
 │   ├── __init__.py
 │   └── extensions.py
 ├── logs/
@@ -88,9 +104,30 @@ meu-projeto/
 
 ## Funcionalidades
 
-- Listar exames
-- Criar novo exame
-- Editar exame existente
-- Deletar exame
-- Buscar exame por ID
-- Buscar exames por nome do paciente 
+- **Login**: Tela de autenticação (simulada)
+- **Dashboard**: Página inicial com opções de navegação
+- **Listar Exames**: Visualização de todos os exames cadastrados
+- **Buscar Exames**: Filtro por nome do paciente
+- **Criar Exame**: Formulário para cadastro de novos exames
+- **Editar Exame**: Modificação de exames existentes
+- **Deletar Exame**: Remoção de exames com confirmação
+- **Logout**: Encerramento da sessão
+
+## Tecnologias Utilizadas
+
+- **Backend**: Flask (Python)
+- **Banco de Dados**: MySQL
+- **Frontend**: HTML, CSS, JavaScript
+- **Estilização**: CSS customizado com gradientes e animações
+
+## Características do Design
+
+- Interface moderna e responsiva
+- Gradientes coloridos e animações suaves
+- Design limpo e profissional
+- Compatível com dispositivos móveis
+- Feedback visual em interações
+
+## Logs
+
+O sistema gera logs de conexão com o banco de dados no diretório `logs/` em formato JSON. 

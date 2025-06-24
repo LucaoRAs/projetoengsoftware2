@@ -96,4 +96,4 @@ class Exame:
             return []
         finally:
             if cursor:
-                cursor.close()
+                cursor.close() 

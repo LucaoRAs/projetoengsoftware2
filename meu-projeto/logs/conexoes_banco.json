@@ -18,3 +18,17 @@
 {"timestamp": "2025-04-16 19:35:59,170", "level": "INFO", "message": "Cursor fechado (fim da interação com banco)"}
 {"timestamp": "2025-04-16 19:36:06,263", "level": "INFO", "message": "Conexão com o banco de dados efetuada com sucesso ou reutilizada"}
 {"timestamp": "2025-04-16 19:36:06,265", "level": "INFO", "message": "Cursor fechado (fim da interação com banco)"}
+{"timestamp": "2025-06-23 21:07:13,641", "level": "ERROR", "message": "Erro ao listar exames: (2002, \"Can't connect to server on 'localhost' (10061)\")"}
+{"timestamp": "2025-06-23 21:07:40,392", "level": "ERROR", "message": "Erro ao criar exame: (2002, \"Can't connect to server on 'localhost' (10061)\")"}
+{"timestamp": "2025-06-23 21:11:37,105", "level": "INFO", "message": "Conexão com o banco de dados efetuada com sucesso ou reutilizada"}
+{"timestamp": "2025-06-23 21:11:37,105", "level": "INFO", "message": "Cursor fechado (fim da interação com banco)"}
+{"timestamp": "2025-06-23 21:13:15,278", "level": "INFO", "message": "Conexão com o banco de dados efetuada com sucesso ou reutilizada"}
+{"timestamp": "2025-06-23 21:13:15,278", "level": "INFO", "message": "Cursor fechado (fim da interação com banco)"}
+{"timestamp": "2025-06-23 21:14:19,536", "level": "INFO", "message": "Conexão com o banco de dados efetuada com sucesso ou reutilizada"}
+{"timestamp": "2025-06-23 21:14:19,537", "level": "INFO", "message": "Cursor fechado (fim da interação com banco)"}
+{"timestamp": "2025-06-23 21:14:21,328", "level": "INFO", "message": "Conexão com o banco de dados efetuada com sucesso ou reutilizada"}
+{"timestamp": "2025-06-23 21:14:21,328", "level": "INFO", "message": "Cursor fechado (fim da interação com banco)"}
+{"timestamp": "2025-06-23 22:12:20,520", "level": "INFO", "message": "Conexão com o banco de dados efetuada com sucesso ou reutilizada"}
+{"timestamp": "2025-06-23 22:12:20,522", "level": "INFO", "message": "Cursor fechado (fim da interação com banco)"}
+{"timestamp": "2025-06-23 22:12:45,105", "level": "INFO", "message": "Conexão com o banco de dados efetuada com sucesso ou reutilizada"}
+{"timestamp": "2025-06-23 22:12:45,106", "level": "INFO", "message": "Cursor fechado (fim da interação com banco)"}
