@@ -131,3 +131,10 @@ meu-projeto/
 ## Logs
 
 O sistema gera logs de conexão com o banco de dados no diretório `logs/` em formato JSON. 
+
+## Testes Unitários
+
+Para executar testes unitários, salve o código abaixo como `test_exame_simples.py` na pasta do projeto e execute:
+
+```
+python test_exame_simples.py 
